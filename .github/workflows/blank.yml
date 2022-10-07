@@ -1,0 +1,14 @@
+name: Do thing
+on:
+  pull_request:
+    types:
+      - closed
+jobs:
+  myjoby:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Do the thing
+        run: echo Hello, world!
+        env:
+          mysecret: ${{ secrets.MYSECRET }}
