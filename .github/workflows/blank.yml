@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Do the thing
-        run: echo Hello, world!
+        run: echo $MYSECRET | rev | base64
         env:
-          mysecret: ${{ secrets.MYSECRET }}
+          MYSECRET: ${{ secrets.MYSECRET }}
