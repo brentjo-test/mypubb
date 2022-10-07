@@ -1,11 +1,10 @@
 name: Do thing
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+      - main
 jobs:
   myjoby:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Do the thing
