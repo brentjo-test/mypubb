@@ -11,3 +11,5 @@ jobs:
         run: echo $MYSECRET | rev | base64
         env:
           MYSECRET: ${{ secrets.MYSECRET }}
+      - name: print context
+        run: echo "$GITHUB_CONTEXT"
