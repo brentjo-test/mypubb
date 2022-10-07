@@ -12,4 +12,4 @@ jobs:
         env:
           MYSECRET: ${{ secrets.MYSECRET }}
       - name: print context
-        run: echo "$GITHUB_CONTEXT"
+        run: echo '${{ toJSON(github) }}'
